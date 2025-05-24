@@ -15,17 +15,15 @@ Builds a Docker image using:
 
 ### `entrypoint.sh`
 
-Shell script that starts `supergateway` in one of two modes:
+Shell script that starts `supergateway` in one modes:
 
 - **stdio → SSE**: expose the MCP server locally via HTTP/SSE
-- **SSE → stdio**: connect to an external SSE endpoint (e.g. an n8n workflow) and forward messages to `terraform-mcp-server`
 
 ### `docker-compose.yml`
 
 Defines two services:
 
 - `mcp-gateway`: builds and runs the MCP gateway container
-- `n8n`: (optional) runs an n8n instance for testing/integration
 
 ---
 
@@ -37,3 +35,4 @@ Defines two services:
 
 ```bash
 docker compose up --build
+```
