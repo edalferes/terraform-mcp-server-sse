@@ -1,3 +1,4 @@
+
 FROM supercorp/supergateway:2.8.3
 
 ARG TERRAFORM_MCP_SERVER_VERSION=0.1.0
@@ -11,14 +12,12 @@ WORKDIR ${WORKDIR}
 
 RUN apk add --no-cache curl unzip
 
-# Baixa e extrai terraform-mcp-server
 RUN curl -Lo terraform.zip \
     https://releases.hashicorp.com/terraform-mcp-server/${TERRAFORM_MCP_SERVER_VERSION}/terraform-mcp-server_${TERRAFORM_MCP_SERVER_VERSION}_linux_amd64.zip \
  && unzip terraform.zip \
  && rm terraform.zip LICENSE.txt \
  && chmod +x terraform-mcp-server
 
-# Copia script de entrypoint
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
