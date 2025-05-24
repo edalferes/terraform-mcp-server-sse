@@ -1,0 +1,6 @@
+services:
+  mcp-gateway:
+    build: .
+    container_name: mcp-gateway
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
