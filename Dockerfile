@@ -1,5 +1,5 @@
 
-FROM supercorp/supergateway:2.8.3
+FROM --platform=$BUILDPLATFORM supercorp/supergateway:2.8.3
 
 ARG TERRAFORM_MCP_SERVER_VERSION=0.1.0
 ARG WORKDIR=/opt/supergateway
@@ -12,8 +12,10 @@ WORKDIR ${WORKDIR}
 
 RUN apk add --no-cache curl unzip
 
+# Download the correct binary for the target architecture
+ARG TARGETARCH
 RUN curl -Lo terraform.zip \
-    https://releases.hashicorp.com/terraform-mcp-server/${TERRAFORM_MCP_SERVER_VERSION}/terraform-mcp-server_${TERRAFORM_MCP_SERVER_VERSION}_linux_amd64.zip \
+    https://releases.hashicorp.com/terraform-mcp-server/${TERRAFORM_MCP_SERVER_VERSION}/terraform-mcp-server_${TERRAFORM_MCP_SERVER_VERSION}_linux_${TARGETARCH}.zip \
  && unzip terraform.zip \
  && rm terraform.zip LICENSE.txt \
  && chmod +x terraform-mcp-server
