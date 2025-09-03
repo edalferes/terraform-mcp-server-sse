@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/edalferes/terraform-mcp-server-sse/compare/v1.1.0...v1.2.0) (2025-09-03)
+
+
+### Features
+
+* add compilation arm ([8191b98](https://github.com/edalferes/terraform-mcp-server-sse/commit/8191b98d9165a91e4d7d854126ca46addeb458d1))
+
 ## [1.1.0](https://github.com/edalferes/terraform-mcp-server-sse/compare/v1.0.0...v1.1.0) (2025-05-24)
 
 
