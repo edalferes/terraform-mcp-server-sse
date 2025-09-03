@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/edalferes/terraform-mcp-server-sse/compare/v1.2.0...v1.3.0) (2025-09-03)
+
+
+### Features
+
+* update ci docker ([77b1745](https://github.com/edalferes/terraform-mcp-server-sse/commit/77b174523ab21d31bfb90eb7ddbfa0c6a75313d1))
+
 ## [1.2.0](https://github.com/edalferes/terraform-mcp-server-sse/compare/v1.1.0...v1.2.0) (2025-09-03)
 
 
