@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/edalferes/terraform-mcp-server-sse/compare/v1.3.0...v1.4.0) (2025-09-03)
+
+
+### Features
+
+* update dockerfile for use BUILDPLATFORM ([c37bf35](https://github.com/edalferes/terraform-mcp-server-sse/commit/c37bf354a92580a35bd86d5c5427934fcb7f19e1))
+
 ## [1.3.0](https://github.com/edalferes/terraform-mcp-server-sse/compare/v1.2.0...v1.3.0) (2025-09-03)
 
 
